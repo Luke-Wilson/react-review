@@ -87,7 +87,14 @@ Test that everything works by running npm start.
 ------------------------------------------------------------
 7. React
 
+Add the react and react-dom npm packages.
+npm install --save react react-dom
 
+Add a component in a file called Counter.js inside the src directory
+
+Then add an event listener to main.js listening for when the DOM content is loaded (DOMContentLoaded). Once loaded, create the Counter element and render it to the mount element on index html.
+
+Inside index.html, create a div with the id 'mount'.
 
 
 
