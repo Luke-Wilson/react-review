@@ -4,7 +4,8 @@ var express = require('express');
 var app = express();
 
 
+var port = 3003;
 
-app.listen(3003, () => {
-  console.log('server listening on 3003');
+app.listen(port, () => {
+  console.log('server listening on', port);
 });
