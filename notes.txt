@@ -1,0 +1,20 @@
+Notes:
+Getting a React app up and running on your own with Webpack!
+
+So!
+1. initialize git repository
+2. initialize npm add .gitignore
+3. Babel
+Babel is needed so you can use JSX to put your React components together in a succinct way. You need a few node packages:
+  babel-core
+  babel-preset-es2015
+  babel-preset-react
+
+Also, add a .babelrc file. This configures Babel to use the presets that we just installed.
+
+4. Webpack
+
+
+5.
+
+
