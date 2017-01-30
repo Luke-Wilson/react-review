@@ -1,2 +1,6 @@
-Install dependencies using npm install
+SETUP
+npm install
+
+COMPILE
+npm run compile
 
