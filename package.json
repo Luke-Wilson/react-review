@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Luke-Wilson/react-review/issues"
   },
-  "homepage": "https://github.com/Luke-Wilson/react-review#readme"
+  "homepage": "https://github.com/Luke-Wilson/react-review#readme",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0"
+  }
 }
