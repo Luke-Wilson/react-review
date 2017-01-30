@@ -1,9 +1,10 @@
+
 var express = require('express');
 
 //require webpack, middleware and config
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpack = require('webpack');
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig = require('../webpack.config.js');
 
 var app = express();
 
