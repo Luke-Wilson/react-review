@@ -51,5 +51,48 @@ NOTE: babel-loader is a Webpack "loader". It supports running Babel from Webpack
 Now we get to USE webpack :D
 Add an npm script to package.json called 'compile'. This will run Webpack.
 
+We won't actually use compile, but it just shows you how webpack works. In reality, webpack will be run by the Express server. And this leads us nicely into the next part...
+
+
+
+------------------------------------------------------------
+6. Express
+
+npm install --save express webpack-dev-middleware
+
+THEN in server file, this is how you use webpackConfig and middleware
+
+  var webpackConfig = require('./webpack.config.js');
+
+  var compiler = webpack(webpackConfig);
+
+  app.use(express.static(__dirname + '/www'));
+
+  app.use(webpackDevMiddleware(compiler, {
+    hot: true,
+    filename: 'bundle.js',
+    publicPath: '/',
+    stats: {
+      colors: true,
+    },
+    historyApiFallback: true,
+  }));
+
+And in your index.html file, load the bundle.js script in the head element:
+  <script src="/bundle.js" ></script>
+
+
+Test that everything works by running npm start.
+
+------------------------------------------------------------
+7. React
+
+
+
+
+
+
+
+
 
 
