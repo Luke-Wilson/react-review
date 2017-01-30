@@ -2,19 +2,54 @@ Notes:
 Getting a React app up and running on your own with Webpack!
 
 So!
+------------------------------------------------------------
 1. initialize git repository
+
+------------------------------------------------------------
 2. initialize npm add .gitignore
+
+------------------------------------------------------------
 3. Babel
 Babel is needed so you can use JSX to put your React components together in a succinct way. You need a few node packages:
   babel-core
-  babel-preset-es2015
-  babel-preset-react
+  babel-preset-es2015  (to let Babel work with ES6)
+  babel-preset-react  (to let Babel work with React ??)
 
 Also, add a .babelrc file. This configures Babel to use the presets that we just installed.
 
+------------------------------------------------------------
 4. Webpack
+"Webpack bundles all your JavaScript together into a single file. This includes each JavaScript file that you write as well as your npm packages."
+
+Basically, webpack PACKS everything into a single file, that loads more quickly, and is easier to deploy.
+
+As part of this process, you need to add a webpack.config.js file, which will contain six configuration options:
+  a. context
+
+  b. entry - the entry point for your application
+
+  c. module.loaders - this section specifies how each file should be processed before it is combined into your bundle. We only have one loader: Babel. This converts ES6 + JSX iJavascript into ES5 before merging it into your bundle.
+
+  d. resolveLoader - This is where Webpack should look for loaders, like the Bable loader mentioned above
+
+  e. resolve - where Webpack should look for files reference by an import or require() statement. This makes it so that you can import npm packages in your code.
+
+so... here are the steps
+
+Run this command:
+npm install --save webpack babel-loader
+
+Add these files:
+src/main.js
+webpack.config.js
+
+NOTE: babel-loader is a Webpack "loader". It supports running Babel from Webpack. Usually any npm package ending in -loader is for Webpack.
 
 
-5.
+------------------------------------------------------------
+5. Compile!
+Now we get to USE webpack :D
+Add an npm script to package.json called 'compile'. This will run Webpack.
+
 
 

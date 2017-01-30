@@ -1,1 +1,3 @@
-The .babelrc file configures Babel to use the presets that we just installed.
+{
+  "presets": ["es2015", "react"]
+}
