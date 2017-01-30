@@ -1,4 +1,4 @@
-
+var path = require('path');
 var express = require('express');
 
 //require webpack, middleware and config
@@ -12,7 +12,7 @@ var app = express();
 var compiler = webpack(webpackConfig);
 
 //set path for static files
-app.use(express.static(__dirname + '/www'));
+app.use(express.static(path.join(__dirname, '../www')));
 
 //use webpack middleware with compiler
 app.use(webpackDevMiddleware(compiler, {
